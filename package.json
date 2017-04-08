@@ -1,5 +1,5 @@
 {
-  "name": "node native addons example",
+  "name": "node-native-addons-example",
   "version": "1.0.0",
   "main": "test.js",
   "dependencies": {
