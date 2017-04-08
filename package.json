@@ -1,0 +1,19 @@
+{
+  "name": "node native addons example",
+  "version": "1.0.0",
+  "main": "test.js",
+  "dependencies": {
+    "nan": "^2.6.1",
+    "node-gyp": "^3.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "npm run compile",
+    "compile": "node-gyp rebuild",
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "gypfile": true
+}
