@@ -1,6 +1,8 @@
 /*
-    based on the tutorial tutorial: https://blog.risingstack.com/writing-native-node-js-modules/
-    uses https://github.com/nodejs/nan
+ *   based on the tutorials:
+ *       https://blog.risingstack.com/writing-native-node-js-modules/
+ *       https://nodeaddons.com/
+ *   uses https://github.com/nodejs/nan
  */
 
 #include <nan.h>
