@@ -1,7 +1,7 @@
 {
   "name": "node-native-addons-example",
   "version": "1.0.0",
-  "main": "test.js",
+  "main": "main.js",
   "dependencies": {
     "nan": "^2.6.1",
     "node-gyp": "^3.6.0"
