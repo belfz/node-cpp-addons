@@ -1,20 +1,13 @@
-/*
- *   based on the tutorials:
- *       https://blog.risingstack.com/writing-native-node-js-modules/
- *       https://nodeaddons.com/
- *   uses https://github.com/nodejs/nan
- */
-
 #include <nan.h>
 
-NAN_METHOD(WhoAmI) {
-    auto message = Nan::New<v8::String>("I'm a node/c++ hero!").ToLocalChecked();
+NAN_METHOD(Hello) {
+    auto message = Nan::New("Hello from C++!").ToLocalChecked();
     info.GetReturnValue().Set(message);
 }
 
 NAN_METHOD(IsPrime) {
     if (!info[0]->IsNumber()) {
-        Nan::ThrowError("argument must be a number!");
+        Nan::ThrowTypeError("argument must be a number!");
         return;
     }
     
@@ -36,7 +29,7 @@ NAN_METHOD(IsPrime) {
 }
 
 NAN_MODULE_INIT(Initialize) {
-    NAN_EXPORT(target, WhoAmI);
+    NAN_EXPORT(target, Hello);
     NAN_EXPORT(target, IsPrime);
 }
 

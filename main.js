@@ -12,4 +12,3 @@ console.log('');
 console.time(JS);
 console.log(`${JS}: checking whether ${number} is prime... ${isPrime(number)}`);
 console.timeEnd(JS);
-
