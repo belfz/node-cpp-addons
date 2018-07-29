@@ -1,4 +1,6 @@
 #include <nan.h>
+#include<math.h>
+
 
 NAN_METHOD(Hello) {
     auto message = Nan::New("Hello from C++!").ToLocalChecked();
@@ -17,8 +19,8 @@ NAN_METHOD(IsPrime) {
         info.GetReturnValue().Set(Nan::False());
         return;
     }
-    
-    for (int i = 2; i < number; i++) {
+
+    for (int i = 2; i <= sqrt(number); i++) {
         if (number % i == 0) {
             info.GetReturnValue().Set(Nan::False());
             return;
